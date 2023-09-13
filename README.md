@@ -5,10 +5,10 @@
 ### Bu projeyi yaparken EF Core Code First ve PagedList gibi bazı araçları kullandım.
 
 ### Projeden bazı resimler
+![r1](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/77e33858-dbe4-4118-a4e6-9893159f17eb)
+![r2](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/239ef723-754c-4b8c-a8d6-ef9f9de4538e)
+![r3](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/0e61eb83-5cc3-434e-9743-6be46c7c8472)
+![r4](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/7d06f670-953b-4cee-9742-1c28063d1049)
+![r6](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/40ae4445-4dfa-4d42-abbb-991451c93698)
+![r7](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/e12ae3e1-4f38-4291-9f8c-8bab14644df4)
 
-![r1](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/a495b7b1-9b09-4d14-936c-6c78257cac12)
-![r2](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/9d730577-fec3-43d4-a14b-7bf13e8f6b06)
-![r5](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/731fb2d1-7e3a-46ed-9700-3ea032bdbb8f)
-![r4](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/5af8f430-4c6f-421f-90ba-35ce2efdfee1)
-![r6](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/a74feb4a-ff20-4513-9fc8-77bbb9939d38)
-![r7](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/e6c18ce0-3f6d-4dd1-ad8d-bd45ebf7081b)
