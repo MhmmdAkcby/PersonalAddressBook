@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Yeni Kişi Ekle";
+}
+@model Person
+
+<h1>Yeni Kişi Ekleme Sayfası</h1>
+<br />
+<form class="form-control" asp-controller="Persons" asp-action="Add" method="post" style="background-color: #E7E9EB;">
+
+    <label><i class="fa-solid fa-circle-user"></i> İsim: </label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label><i class="fa-solid fa-circle-user"></i> Soyisim: </label>
+    <input type="text" asp-for="Surname" class="form-control" />
+    <br />
+    <label><i class="fa-solid fa-phone"></i> Telefon No: </label>
+    <input type="number" asp-for="PhoneNumber" class="form-control" />
+    <br />
+    <label><i class="fa-solid fa-envelope"></i> Email:  </label>
+    <input type="email" asp-for="Email" class="form-control" />
+    <br />
+    <label><i class="fa-solid fa-location-dot"></i> Adres: </label>
+    <input type="text" asp-for="Address" class="form-control" />
+    <br />
+    <a asp-controller="Home" asp-action="Index" class="card-link btn btn-primary mx-3"><i class="fa-solid fa-house"></i> AnaSayfaya Dön</a>
+    <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Kaydet</button>
+</form>

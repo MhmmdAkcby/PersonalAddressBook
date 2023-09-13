@@ -1,0 +1,81 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+@{
+    ViewData["Title"] ="Kişi Düzenle";
+}
+@model IPagedList<Person>
+@section Css{
+
+    <style>
+        table {
+            background-color: #E7E9EB;
+        }
+        .frm{
+            margin-left:78%;
+        }
+    </style>
+
+}
+
+<h1>Kişi Düzenle</h1>
+
+@*Ürün bildiriimi verme*@
+
+@if (TempData["status"] != null)
+{
+    <div class="alert alert-info" role="alert"><i class="fa-solid fa-circle-exclamation"></i> @TempData["status"]</div>
+}
+
+<form asp-controller="Persons" asp-action="Index" method="post" class="frm">
+    <p>
+        <input type="text" name="searchString" placeholder="Aranacak ismi gir" style="border-radius:10px; width:225px;height:40px;">
+        <input type="submit" value="Ara" class="btn btn-dark">
+    </p>
+</form>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th><i class="fa-solid fa-id-badge"></i> Id</th>
+            <th><i class="fa-solid fa-circle-user"></i> İsim</th>
+            <th><i class="fa-solid fa-circle-user"></i> Soyisim</th>
+            <th><i class="fa-solid fa-phone"></i> Telefon Numarası</th>
+            <th><i class="fa-solid fa-envelope"></i> Email</th>
+            <th><i class="fa-solid fa-location-dot"></i> Adres</th>
+            <th><i class="fa-solid fa-trash"></i> Sil</th>
+            <th><i class="fa-solid fa-gears"></i> Kişi Detay</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Name</td>
+                <td>@x.Surname</td>
+                <td>@x.PhoneNumber</td>
+                <td>@x.Email</td>
+                <td>@x.Address</td>
+                <td><a class="btn btn-danger" asp-controller="persons" asp-action="Remove" asp-route-id="@x.Id"><i class="fa-solid fa-trash"></i> Sil</a></td>
+                <td><a class="btn btn-success" asp-controller="persons" asp-action="PersonDetail" asp-route-id="@x.Id"><i class="fa-solid fa-gears"></i> Kişi Detay</a></td>
+            </tr>
+        }
+    </tbody>
+    
+
+</table>
+
+<div class="pagination-container">
+    @Html.PagedListPager((IPagedList)Model, page2 => Url.Action("Index", new { page2 }), new PagedListRenderOptions
+    {
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" },
+    ContainerDivClasses = new[] { "pagination", "justify-content-center" },
+    UlElementClasses = new[] { "pagination" }
+    })
+</div>
+<a class="btn btn-primary mb-2" asp-controller="persons" asp-action="Add"><i class="fa-solid fa-plus"></i> Yeni Kişi Ekle</a>
+<div class="alert alert-primary" role="alert"> 
+    Toplam Kişi Sayısı: @ViewData["status"]
+</div>
+

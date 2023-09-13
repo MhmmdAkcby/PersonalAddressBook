@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Kişi Detay";
+}
+
+@model Person
+
+@section Css{
+
+    <style>
+
+        .card{
+            margin-left:37%;
+            margin-top:50px;
+        }
+    </style>
+
+}
+<h1>Kişi Detay Sayfası</h1>
+<div class="card bg-success" style="width: 18rem;">
+    <div class="card-body">
+        <h3 class="card-title text-light"><i class="fa-solid fa-id-card-clip"></i> Kişi Detayı</h3>
+        <br />
+        <h6 class="card-subtitle mb-2 text-body-secondary text-light"><b><i class="fa-solid fa-user"></i> Adı: </b>@Model.Name</h6>
+        <hr class="bg-light"/>
+        <p class="card-text text-light"><b><i class="fa-solid fa-user"></i> Soyadı: </b>@Model.Surname</p>
+        <hr class="bg-light" />
+        <p class="card-text text-light"><b><i class="fa-solid fa-phone"></i> Telefon Numarası: </b>@Model.PhoneNumber</p>
+        <hr class="bg-light" />
+        <p class="card-text text-light"><b><i class="fa-solid fa-envelope"></i> Email: </b>@Model.Email</p>
+        <hr class="bg-light" />
+        <p class="card-text text-light"><b><i class="fa-solid fa-location-dot"></i> Adresi: </b>@Model.Address</p>
+        <hr class="bg-light" />
+        <a asp-controller="Persons" asp-action="Index" class="card-link btn btn-primary mx-3"><i class="fa-solid fa-arrow-left"></i> Geri Git</a>
+        <a class="btn btn-warning" asp-controller="persons" asp-action="Update" asp-route-id="@Model.Id"><i class="fa-solid fa-arrow-rotate-left"></i> Güncelle</a>
+    </div>
+</div>

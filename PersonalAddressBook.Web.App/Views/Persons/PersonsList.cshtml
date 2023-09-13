@@ -1,0 +1,67 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+
+@{
+    ViewData["Title"] = "Kişi Listesi";
+}
+
+@model IPagedList<Person>
+
+@section Css{
+
+    <style>
+        table {
+            background-color: #E7E9EB;
+        }
+
+    </style>
+
+}
+<h1>Kişi Listesi</h1>
+<br />
+
+<form asp-controller="Persons" asp-action="PersonsList" method="post" class="frm">
+    <p>
+        <input type="text" name="searchString" placeholder="Aranacak ismi gir" style="border-radius:10px; width:225px;height:40px;">
+        <input type="submit" value="Ara" class="btn btn-dark">
+    </p>
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th><i class="fa-solid fa-circle-user"></i> İsim</th>
+            <th><i class="fa-solid fa-circle-user"></i> Soyisim</th>
+            <th><i class="fa-solid fa-phone"></i> Telefon Numarası</th>
+            <th><i class="fa-solid fa-envelope"></i> Email</th>
+            <th><i class="fa-solid fa-location-dot"></i> Adres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Name</td>
+                <td>@x.Surname</td>
+                <td>@x.PhoneNumber</td>
+                <td>@x.Email</td>
+                <td>@x.Address</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+@* @Html.PagedListPager((IPagedList)Model, page=> Url.Action("PersonsList", new{page})) *@
+
+<div class="pagination-container">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("PersonsList", new { page }), new PagedListRenderOptions
+    {
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" },
+    ContainerDivClasses = new[] { "pagination", "justify-content-center" },
+    UlElementClasses = new[] { "pagination" }
+    })
+</div>
+
+<div class="alert alert-primary" role="alert">Toplam Kişi Sayısı: @ViewData["status"]</div>
