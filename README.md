@@ -1,8 +1,8 @@
 # Kişisel Adres Defteri 
-## Kişilerin adı, soyadı, telefon numarası, e posta adresi adresi gibi temel bilgilerini saklama. 
-## Kişileri ekleme, silme, düzenleme işlemleri yapılabilecek. Ad a göre arama yapabilme.
+### Kişilerin adı, soyadı, telefon numarası, e posta adresi adresi gibi temel bilgilerini saklama. 
+### Kişileri ekleme, silme, düzenleme işlemlerinin yapıldığı. Ad a göre arama yapabilme.
 
-## Bu projeyi yaparken EF Core Code First ve PagedList gibi bazı araçları kullandım. 
+### Bu projeyi yaparken EF Core Code First ve PagedList gibi bazı araçları kullandım. 
 
 ### Projeden bazı resimler
 ![r1](https://github.com/MhmmdAkcby/PersonalAddressBook/assets/129775174/a495b7b1-9b09-4d14-936c-6c78257cac12)
